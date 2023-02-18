@@ -2,12 +2,12 @@
   "name": "newmernapp",
   "version": "1.0.0",
   "description": "",
-  "main": "./newmernappbackend/index.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./newmernappbackend/index.js",
-    "dev": "nodemon ./newmernappbackend/index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
