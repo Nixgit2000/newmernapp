@@ -1,8 +1,8 @@
-import app from './server.js'
+import app from './newmernappbackend/server.js'
 import mongodb from 'mongodb'
 import dotenv from 'dotenv'
-import MoviesDAO from './dao/moviesDAO.js'
-import ReviewsDAO from './dao/reviewsDAO.js'
+import MoviesDAO from './newmernappbackend/dao/moviesDAO.js'
+import ReviewsDAO from './newmernappbackend/dao/reviewsDAO.js'
 
 async function main() {
     dotenv.config()
