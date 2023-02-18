@@ -5,10 +5,13 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
-  },
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -19,10 +22,11 @@
     "express": "^4.18.2",
     "mongodb": "^5.0.1",
     "mongoose": "^6.9.2",
-    "nodemon": "^2.0.20",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "serve": "^14.2.0"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-export-default-from": "^7.18.10"
+    "@babel/plugin-proposal-export-default-from": "^7.18.10",
+    "nodemon": "^2.0.20"
   }
 }
