@@ -1,8 +1,10 @@
 import app from './server.js'
 import mongodb from 'mongodb'
-import dotenv from 'dotenv'
+require("dotenv").config({ path: resolve(__dirname, ".env") });
+const { resolve } = require("path");
 import MoviesDAO from './dao/moviesDAO.js'
 import ReviewsDAO from './dao/reviewsDAO.js'
+
 
 async function main() {
     dotenv.config()
