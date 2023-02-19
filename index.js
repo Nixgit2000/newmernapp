@@ -19,9 +19,13 @@ async function main() {
             await client.connect()
             await MoviesDAO.injectDB(client)
             await ReviewsDAO.injectDB(client)
-            app.listen(port, () =>{
-                console.log('server is running on PORT:' +port)
-            })
+            // app.listen(port, () =>{
+            //     console.log('server is running on PORT:' +port)
+            // })
+
+            app.listen(process.env.PORT || 3000, function(){
+                console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+              });
         } catch (e) {
             console.error(e);
             process.exit(1);
